@@ -14,12 +14,26 @@ public class Warehouse {
     private final List<Product> products = new CopyOnWriteArrayList<>();
 
     public Warehouse() {
-        products.add(new Product(1, "Milk", Category.DAIRY, 5, LocalDate.now(), LocalDate.now()));
-        products.add(new Product(2, "Carrot", Category.VEGETABLE, 4, LocalDate.now(), LocalDate.now()));
+        initializeWarehouseWithDefaultProducts();
+    }
+
+    private void initializeWarehouseWithDefaultProducts() {
+        products.add(createProduct(1, "Milk", Category.DAIRY, 5));
+        products.add(createProduct(2, "Carrot", Category.VEGETABLE, 4));
+    }
+
+    private Product createProduct(int id, String name, Category category, int rating) {
+        return new Product(id, name, category, rating, LocalDate.now(), LocalDate.now());
     }
 
     public List<Product> getProducts() {
-
         return List.copyOf(products);
+    }
+
+    public Product getProductById(int id) {
+        return products.stream()
+                .filter(product -> product.id() == id)
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("No product found with given id"));
     }
 }

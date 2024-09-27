@@ -11,9 +11,7 @@ import java.util.List;
 
 @Path("/")
 public class WarehouseResource {
-    private Warehouse warehouse;
-
-    public WarehouseResource() {}
+    private final Warehouse warehouse;
 
     @Inject
     public WarehouseResource(Warehouse warehouse) {
@@ -26,6 +24,13 @@ public class WarehouseResource {
     @Produces(MediaType.APPLICATION_JSON)
     public List<Product> getProducts() {
         return warehouse.getProducts();
+    }
+
+    @Path("/products/{id}")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Product getProductById(@PathParam("id") String id) {
+        return warehouse.getProductById(Integer.parseInt(id));
     }
 
 
