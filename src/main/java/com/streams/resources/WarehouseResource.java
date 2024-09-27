@@ -1,12 +1,15 @@
 package com.streams.resources;
 
+import com.streams.entities.Product;
 import com.streams.service.Warehouse;
-import jakarta.inject.Inject;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
 
-@Path("/hello-world")
+import jakarta.inject.Inject;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
+
+import java.util.List;
+
+@Path("/")
 public class WarehouseResource {
     private Warehouse warehouse;
 
@@ -19,8 +22,11 @@ public class WarehouseResource {
     }
 
     @GET
-    @Produces("text/plain")
-    public String hello() {
-        return "Hello, World!";
+    @Path("/products")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Product> getProducts() {
+        return warehouse.getProducts();
     }
+
+
 }

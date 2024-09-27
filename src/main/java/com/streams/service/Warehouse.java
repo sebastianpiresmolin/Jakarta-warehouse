@@ -19,6 +19,7 @@ public class Warehouse {
     }
 
     public List<Product> getProducts() {
+
         return List.copyOf(products);
     }
 }
