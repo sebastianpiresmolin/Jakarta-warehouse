@@ -6,8 +6,10 @@ import com.streams.entities.Product;
 import jakarta.enterprise.context.ApplicationScoped;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.stream.Collectors;
 
 @ApplicationScoped
 public class Warehouse {
@@ -30,10 +32,17 @@ public class Warehouse {
         return List.copyOf(products);
     }
 
-    public Product getProductById(int id) {
+    public Product getProductsById(int id) {
         return products.stream()
                 .filter(product -> product.id() == id)
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("No product found with given id"));
+    }
+
+    public List<Product> getProductsByCategory(Category category) {
+        return products.stream()
+                .filter(product -> product.category() == category)
+                .sorted(Comparator.comparing(Product::name))
+                .collect(Collectors.toList());
     }
 }

@@ -1,5 +1,6 @@
 package com.streams.resources;
 
+import com.streams.entities.Category;
 import com.streams.entities.Product;
 import com.streams.service.Warehouse;
 
@@ -11,12 +12,10 @@ import java.util.List;
 
 @Path("/")
 public class WarehouseResource {
-    private final Warehouse warehouse;
-
     @Inject
-    public WarehouseResource(Warehouse warehouse) {
-        System.out.println("WarehouseResource object created");
-        this.warehouse = warehouse;
+    private Warehouse warehouse;
+
+    public WarehouseResource() {
     }
 
     @GET
@@ -30,7 +29,15 @@ public class WarehouseResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Product getProductById(@PathParam("id") String id) {
-        return warehouse.getProductById(Integer.parseInt(id));
+        return warehouse.getProductsById(Integer.parseInt(id));
+    }
+
+    @Path("/products/category/{category}")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Product> getProductsByCategory(@PathParam("category") String categoryString) {
+        Category category = Category.valueOf(categoryString.toUpperCase());
+        return warehouse.getProductsByCategory(category);
     }
 
 

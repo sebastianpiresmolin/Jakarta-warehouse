@@ -11,8 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="852b65e5-8545-48f6-b7ff-9c10498e67d2" name="Changes" comment="/products/{id} - getProductById() working as intended">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/WarehouseResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/WarehouseResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/service/Warehouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/service/Warehouse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/service/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/service/Warehouse.java" afterDir="false" />
     </list>
@@ -158,7 +156,16 @@
       <workItem from="1727119504210" duration="704000" />
       <workItem from="1727448313617" duration="1326000" />
       <workItem from="1727457464385" duration="1068000" />
+      <workItem from="1727548360929" duration="831000" />
     </task>
+    <task id="LOCAL−00001" summary="/products/{id} - getProductById() working as intended">
+      <option name="closed" value="true" />
+      <created>1727461216233</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1727461216233</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
