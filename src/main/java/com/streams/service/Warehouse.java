@@ -28,6 +28,10 @@ public class Warehouse {
         return new Product(id, name, category, rating, LocalDate.now(), LocalDate.now());
     }
 
+    public void addProduct(Product product) {
+        products.add(product);
+    }
+
     public List<Product> getProducts() {
         return List.copyOf(products);
     }

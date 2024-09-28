@@ -1,0 +1,10 @@
+###
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+
+{
+  "id": 5,
+  "name": "Melon",
+  "category": "FRUIT",
+  "rating": 5
+}
