@@ -1,0 +1,36 @@
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+Content-Length: 70
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 5,
+  "name": "Melon",
+  "category": "FRUIT",
+  "rating": 5
+}
+
+<> 2024-09-28T215714.201.json
+
+###
+
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+Content-Length: 70
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 5,
+  "name": "Melon",
+  "category": "FRUIT",
+  "rating": 5
+}
+
+<> 2024-09-28T215302.201.json
+
+###
+
