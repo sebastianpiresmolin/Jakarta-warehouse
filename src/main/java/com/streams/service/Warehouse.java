@@ -40,7 +40,7 @@ public class Warehouse {
         return products.stream()
                 .filter(product -> product.id() == id)
                 .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("No product found with given id"));
+                .orElseThrow(() -> new IllegalArgumentException("No product found with given id: " + id));
     }
 
     public List<Product> getProductsByCategory(Category category) {
