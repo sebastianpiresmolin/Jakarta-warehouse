@@ -6,6 +6,8 @@ import com.streams.entities.Product;
 import jakarta.enterprise.context.ApplicationScoped;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -13,7 +15,7 @@ import java.util.stream.Collectors;
 
 @ApplicationScoped
 public class Warehouse {
-    private final List<Product> products = new CopyOnWriteArrayList<>();
+    private List<Product> products = Collections.synchronizedList(new ArrayList<>());
 
     public Warehouse() {
         initializeWarehouseWithDefaultProducts();
