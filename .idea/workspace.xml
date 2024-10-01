@@ -9,12 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="852b65e5-8545-48f6-b7ff-9c10498e67d2" name="Changes" comment="Implemented synchronizedList instead of CopyOnWrite since in my mind this would be a warehouse app which would have both a lot of writing and reading.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/streams/service/WarehouseService.java" afterDir="false" />
+    <list default="true" id="852b65e5-8545-48f6-b7ff-9c10498e67d2" name="Changes" comment="Refactored WarehouseResource to use constructor-based injection instead of field-based injection as Martin recommended to simplify testing and code robustness.">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/service/Warehouse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/WarehouseResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/WarehouseResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/resources/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/ProductDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseHTTP.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseHTTP.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/service/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/service/WarehouseImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +173,7 @@
       <workItem from="1727548360929" duration="2418000" />
       <workItem from="1727615505421" duration="923000" />
       <workItem from="1727725399996" duration="798000" />
-      <workItem from="1727785141937" duration="799000" />
+      <workItem from="1727785141937" duration="1405000" />
     </task>
     <task id="LOCAL−00001" summary="/products/{id} - getProductById() working as intended">
       <option name="closed" value="true" />
@@ -216,7 +217,14 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1727726183748</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="Refactored WarehouseResource to use constructor-based injection instead of field-based injection as Martin recommended to simplify testing and code robustness.">
+      <option name="closed" value="true" />
+      <created>1727786081723</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1727786081723</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +236,7 @@
     <MESSAGE value="merge issues" />
     <MESSAGE value="Fixed IllegalArgumentException so that it no longer returns String when the GET is expecting JSON" />
     <MESSAGE value="Implemented synchronizedList instead of CopyOnWrite since in my mind this would be a warehouse app which would have both a lot of writing and reading." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented synchronizedList instead of CopyOnWrite since in my mind this would be a warehouse app which would have both a lot of writing and reading." />
+    <MESSAGE value="Refactored WarehouseResource to use constructor-based injection instead of field-based injection as Martin recommended to simplify testing and code robustness." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored WarehouseResource to use constructor-based injection instead of field-based injection as Martin recommended to simplify testing and code robustness." />
   </component>
 </project>

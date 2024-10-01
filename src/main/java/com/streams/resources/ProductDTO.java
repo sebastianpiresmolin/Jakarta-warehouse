@@ -2,13 +2,26 @@ package com.streams.resources;
 
 import com.streams.entities.Category;
 import com.streams.entities.Product;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
 
 public class ProductDTO {
+    @Min(1)
     private int id;
+
+    @NotNull
+    @Size(min = 1, max = 100)
     private String name;
+
+    @NotNull
     private String category;
+
+    @Min(0)
+    @Max(10)
     private int rating;
 
 

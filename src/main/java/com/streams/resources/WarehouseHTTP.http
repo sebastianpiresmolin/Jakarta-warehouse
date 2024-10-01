@@ -8,3 +8,14 @@ Content-Type: application/json
   "category": "FRUIT",
   "rating": 5
 }
+
+###
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+
+{
+  "id": 5,
+  "name": "Error",
+  "category": "EMPTY",
+  "rating": 100
+}

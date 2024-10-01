@@ -4,6 +4,7 @@ import com.streams.entities.Category;
 import com.streams.entities.Product;
 
 import com.streams.service.WarehouseService;
+import jakarta.validation.Valid;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import jakarta.ws.rs.*;
@@ -51,7 +52,7 @@ public class WarehouseResource {
     @Path("/products/create")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response createProduct(ProductDTO productDTO) {
+    public Response createProduct(@Valid ProductDTO productDTO) {
         Product product = productDTO.toProduct();
         warehouseService.addProduct(product);
         return Response.status(Response.Status.CREATED).entity(product).build();
