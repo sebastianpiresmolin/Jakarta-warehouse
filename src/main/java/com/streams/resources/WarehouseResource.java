@@ -2,36 +2,41 @@ package com.streams.resources;
 
 import com.streams.entities.Category;
 import com.streams.entities.Product;
-import com.streams.service.Warehouse;
 
+import com.streams.service.WarehouseService;
 import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Path("/")
 public class WarehouseResource {
-    @Inject
-    private Warehouse warehouse;
+
+    private WarehouseService warehouseService;
 
     public WarehouseResource() {
+    }
+
+    @Inject
+    public WarehouseResource(@Named("Impl") WarehouseService warehouseService) {
+        this.warehouseService = warehouseService;
     }
 
     @GET
     @Path("/products")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Product> getProducts() {
-        return warehouse.getProducts();
+        return warehouseService.getProducts();
     }
 
     @Path("/products/{id}")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Product getProductById(@PathParam("id") String id) {
-        return warehouse.getProductsById(Integer.parseInt(id));
+        return warehouseService.getProductsById(Integer.parseInt(id));
     }
 
     @Path("/products/category/{category}")
@@ -39,7 +44,7 @@ public class WarehouseResource {
     @Produces(MediaType.APPLICATION_JSON)
     public List<Product> getProductsByCategory(@PathParam("category") String categoryString) {
         Category category = Category.valueOf(categoryString.toUpperCase());
-        return warehouse.getProductsByCategory(category);
+        return warehouseService.getProductsByCategory(category);
     }
 
     @POST
@@ -48,7 +53,7 @@ public class WarehouseResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response createProduct(ProductDTO productDTO) {
         Product product = productDTO.toProduct();
-        warehouse.addProduct(product);
+        warehouseService.addProduct(product);
         return Response.status(Response.Status.CREATED).entity(product).build();
     }
 

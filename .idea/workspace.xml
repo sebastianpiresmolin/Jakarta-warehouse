@@ -9,9 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="852b65e5-8545-48f6-b7ff-9c10498e67d2" name="Changes" comment="Fixed IllegalArgumentException so that it no longer returns String when the GET is expecting JSON">
+    <list default="true" id="852b65e5-8545-48f6-b7ff-9c10498e67d2" name="Changes" comment="Implemented synchronizedList instead of CopyOnWrite since in my mind this would be a warehouse app which would have both a lot of writing and reading.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/streams/service/WarehouseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/service/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/service/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/service/Warehouse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/service/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/service/WarehouseImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +27,7 @@
         <option value="Enum" />
         <option value="HTTP Request" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -167,7 +171,8 @@
       <workItem from="1727457464385" duration="1068000" />
       <workItem from="1727548360929" duration="2418000" />
       <workItem from="1727615505421" duration="923000" />
-      <workItem from="1727725399996" duration="702000" />
+      <workItem from="1727725399996" duration="798000" />
+      <workItem from="1727785141937" duration="799000" />
     </task>
     <task id="LOCAL−00001" summary="/products/{id} - getProductById() working as intended">
       <option name="closed" value="true" />
@@ -204,7 +209,14 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1727616198906</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Implemented synchronizedList instead of CopyOnWrite since in my mind this would be a warehouse app which would have both a lot of writing and reading.">
+      <option name="closed" value="true" />
+      <created>1727726183748</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1727726183748</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +227,7 @@
     <MESSAGE value="/products/category/{category} - get products by category now works" />
     <MESSAGE value="merge issues" />
     <MESSAGE value="Fixed IllegalArgumentException so that it no longer returns String when the GET is expecting JSON" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed IllegalArgumentException so that it no longer returns String when the GET is expecting JSON" />
+    <MESSAGE value="Implemented synchronizedList instead of CopyOnWrite since in my mind this would be a warehouse app which would have both a lot of writing and reading." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented synchronizedList instead of CopyOnWrite since in my mind this would be a warehouse app which would have both a lot of writing and reading." />
   </component>
 </project>

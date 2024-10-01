@@ -1,23 +1,23 @@
 package com.streams.service;
 
-
 import com.streams.entities.Category;
 import com.streams.entities.Product;
 import jakarta.enterprise.context.ApplicationScoped;
 
+import jakarta.inject.Named;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
 
+@Named("Impl")
 @ApplicationScoped
-public class Warehouse {
-    private List<Product> products = Collections.synchronizedList(new ArrayList<>());
+public class WarehouseImpl implements WarehouseService {
+    private final List<Product> products = Collections.synchronizedList(new ArrayList<>());
 
-    public Warehouse() {
+    public WarehouseImpl() {
         initializeWarehouseWithDefaultProducts();
     }
 
@@ -30,14 +30,17 @@ public class Warehouse {
         return new Product(id, name, category, rating, LocalDate.now(), LocalDate.now());
     }
 
+    @Override
     public void addProduct(Product product) {
         products.add(product);
     }
 
+    @Override
     public List<Product> getProducts() {
         return List.copyOf(products);
     }
 
+    @Override
     public Product getProductsById(int id) {
         return products.stream()
                 .filter(product -> product.id() == id)
@@ -45,6 +48,7 @@ public class Warehouse {
                 .orElseThrow(() -> new IllegalArgumentException("No product found with given id: " + id));
     }
 
+    @Override
     public List<Product> getProductsByCategory(Category category) {
         return products.stream()
                 .filter(product -> product.category() == category)
