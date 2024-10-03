@@ -12,6 +12,42 @@ Accept: */*
   "rating": 100
 }
 
+<> 2024-10-03T101728.400.txt
+
+###
+
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+Content-Length: 70
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 5,
+  "name": "Melon",
+  "category": "FRUIT",
+  "rating": 5
+}
+
+<> 2024-10-03T101728.201.txt
+
+###
+
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+Content-Length: 72
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 5,
+  "name": "Error",
+  "category": "EMPTY",
+  "rating": 100
+}
+
 <> 2024-10-01T144246.400.txt
 
 ###

@@ -15,7 +15,8 @@ import java.util.stream.Collectors;
 @Named("Impl")
 @ApplicationScoped
 public class WarehouseImpl implements WarehouseService {
-    private final List<Product> products = Collections.synchronizedList(new ArrayList<>());
+
+    private final List<Product> products = Collections.synchronizedList(new ArrayList<Product>());
 
     public WarehouseImpl() {
         initializeWarehouseWithDefaultProducts();

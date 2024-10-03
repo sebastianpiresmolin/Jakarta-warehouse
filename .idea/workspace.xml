@@ -9,13 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="852b65e5-8545-48f6-b7ff-9c10498e67d2" name="Changes" comment="Refactored WarehouseResource to use constructor-based injection instead of field-based injection as Martin recommended to simplify testing and code robustness.">
+    <list default="true" id="852b65e5-8545-48f6-b7ff-9c10498e67d2" name="Changes" comment="Finished implementing bean validation constraints for my Product record and Product data to object class. I wrote a HTTP req that breaks the constraint and recieved an ConstraintValidationException as expected.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/LoggingInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/WarehouseResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/WarehouseResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/resources/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/ProductDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseHTTP.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseHTTP.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/service/WarehouseImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/service/WarehouseImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/service/WarehouseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/service/WarehouseImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +30,8 @@
       <list>
         <option value="Enum" />
         <option value="HTTP Request" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,25 +54,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;HTTP Request.All in WarehouseHTTP.executor&quot;: &quot;Run&quot;,
-    &quot;JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HTTP Request.All in WarehouseHTTP.executor": "Run",
+    "JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final">
     <configuration name="All in WarehouseHTTP" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseHTTP.http">
       <method v="2" />
@@ -173,7 +177,9 @@
       <workItem from="1727548360929" duration="2418000" />
       <workItem from="1727615505421" duration="923000" />
       <workItem from="1727725399996" duration="798000" />
-      <workItem from="1727785141937" duration="1405000" />
+      <workItem from="1727785141937" duration="1750000" />
+      <workItem from="1727866697583" duration="1367000" />
+      <workItem from="1727943366063" duration="3850000" />
     </task>
     <task id="LOCAL−00001" summary="/products/{id} - getProductById() working as intended">
       <option name="closed" value="true" />
@@ -224,7 +230,28 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1727786081723</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="Finished implementing bean validation constraints for my Product record and Product data to object class. I wrote a HTTP req that breaks the constraint and recieved an ConstraintValidationException as expected.">
+      <option name="closed" value="true" />
+      <created>1727786828127</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1727786828127</updated>
+    </task>
+    <task id="LOCAL−00009" summary="Finished implementing bean validation constraints for my Product record and Product data to object class. I wrote a HTTP req that breaks the constraint and recieved an ConstraintValidationException as expected.">
+      <option name="closed" value="true" />
+      <created>1727786842999</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1727786842999</updated>
+    </task>
+    <task id="LOCAL−00010" summary="Finished implementing bean validation constraints for my Product record and Product data to object class. I wrote a HTTP req that breaks the constraint and recieved an ConstraintValidationException as expected.">
+      <option name="closed" value="true" />
+      <created>1727786847098</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1727786847098</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +264,7 @@
     <MESSAGE value="Fixed IllegalArgumentException so that it no longer returns String when the GET is expecting JSON" />
     <MESSAGE value="Implemented synchronizedList instead of CopyOnWrite since in my mind this would be a warehouse app which would have both a lot of writing and reading." />
     <MESSAGE value="Refactored WarehouseResource to use constructor-based injection instead of field-based injection as Martin recommended to simplify testing and code robustness." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored WarehouseResource to use constructor-based injection instead of field-based injection as Martin recommended to simplify testing and code robustness." />
+    <MESSAGE value="Finished implementing bean validation constraints for my Product record and Product data to object class. I wrote a HTTP req that breaks the constraint and recieved an ConstraintValidationException as expected." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished implementing bean validation constraints for my Product record and Product data to object class. I wrote a HTTP req that breaks the constraint and recieved an ConstraintValidationException as expected." />
   </component>
 </project>

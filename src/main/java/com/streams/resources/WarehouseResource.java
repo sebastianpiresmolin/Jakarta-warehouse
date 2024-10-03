@@ -10,11 +10,16 @@ import jakarta.inject.Named;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
 @Path("/")
+@Log
 public class WarehouseResource {
+
+    private static final Logger logger = LoggerFactory.getLogger(WarehouseResource.class);
 
     private WarehouseService warehouseService;
 
@@ -51,7 +56,7 @@ public class WarehouseResource {
     @POST
     @Path("/products/create")
     @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
     public Response createProduct(@Valid ProductDTO productDTO) {
         Product product = productDTO.toProduct();
         warehouseService.addProduct(product);
