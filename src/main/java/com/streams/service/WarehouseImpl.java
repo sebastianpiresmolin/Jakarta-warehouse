@@ -23,8 +23,41 @@ public class WarehouseImpl implements WarehouseService {
     }
 
     private void initializeWarehouseWithDefaultProducts() {
-        products.add(createProduct(1, "Milk", Category.DAIRY, 5));
-        products.add(createProduct(2, "Carrot", Category.VEGETABLE, 4));
+        products.add(createProduct(1, "Milk", Category.DAIRY, 7));
+        products.add(createProduct(2, "Cheese", Category.DAIRY, 9));
+        products.add(createProduct(3, "Yogurt", Category.DAIRY, 6));
+        products.add(createProduct(4, "Butter", Category.DAIRY, 8));
+        products.add(createProduct(5, "Cream", Category.DAIRY, 8));
+
+        products.add(createProduct(6, "Apple", Category.FRUIT, 7));
+        products.add(createProduct(7, "Banana", Category.FRUIT, 9));
+        products.add(createProduct(8, "Cherry", Category.FRUIT, 6));
+        products.add(createProduct(9, "Date", Category.FRUIT, 4));
+        products.add(createProduct(10, "Kiwi", Category.FRUIT, 8));
+
+        products.add(createProduct(11, "Broccoli", Category.VEGETABLE, 5));
+        products.add(createProduct(12, "Carrot", Category.VEGETABLE, 7));
+        products.add(createProduct(13, "Pea", Category.VEGETABLE, 6));
+        products.add(createProduct(14, "Cabbage", Category.VEGETABLE, 5));
+        products.add(createProduct(15, "Iceberg lettuce", Category.VEGETABLE, 4));
+
+        products.add(createProduct(16, "Salmon", Category.FISH, 8));
+        products.add(createProduct(17, "Tuna", Category.FISH, 7));
+        products.add(createProduct(18, "Trout", Category.FISH, 6));
+        products.add(createProduct(19, "Cod", Category.FISH, 5));
+        products.add(createProduct(20, "Herring", Category.FISH, 7));
+
+        products.add(createProduct(21, "Beef", Category.MEAT, 8));
+        products.add(createProduct(22, "Chicken", Category.MEAT, 7));
+        products.add(createProduct(23, "Lamb", Category.MEAT, 6));
+        products.add(createProduct(24, "Pork", Category.MEAT, 5));
+        products.add(createProduct(25, "Turkey", Category.MEAT, 4));
+
+        products.add(createProduct(26, "Bread", Category.EMPTY, 3));
+        products.add(createProduct(27, "Cereal", Category.EMPTY, 6));
+        products.add(createProduct(28, "Noodles", Category.EMPTY, 7));
+        products.add(createProduct(29, "Rice", Category.EMPTY, 4));
+        products.add(createProduct(30, "Oats", Category.EMPTY, 8));
     }
 
     private Product createProduct(int id, String name, Category category, int rating) {

@@ -7,12 +7,15 @@ import com.streams.service.WarehouseService;
 import jakarta.validation.Valid;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
+import jakarta.ws.rs.DefaultValue;
+import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Collections;
 import java.util.List;
 
 @Path("/")
@@ -34,8 +37,18 @@ public class WarehouseResource {
     @GET
     @Path("/products")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Product> getProducts() {
-        return warehouseService.getProducts();
+    public List<Product> getProducts(
+            @DefaultValue("1") @QueryParam("page") int page,
+            @DefaultValue("10") @QueryParam("size") int size
+    ) {
+        int start = (page - 1) * size;
+        List<Product> products = warehouseService.getProducts();
+
+        if(products.size() < start){
+            return Collections.emptyList();
+        }
+
+        return products.subList(start, Math.min(start + size, products.size()));
     }
 
     @Path("/products/{id}")

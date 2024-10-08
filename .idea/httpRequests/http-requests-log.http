@@ -1,3 +1,304 @@
+GET http://localhost:8080/jakarta_demo/api/products
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-08T095541.200.json
+
+###
+
+GET http://localhost:8080/jakarta_demo/api/products/category/cat
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-08T094821-1.404.json
+
+###
+
+GET http://localhost:8080/jakarta_demo/api/products/1823
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-08T094821.404.json
+
+###
+
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+Content-Length: 72
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 5,
+  "name": "Error",
+  "category": "EMPTY",
+  "rating": 100
+}
+
+<> 2024-10-08T094820.400.txt
+
+###
+
+GET http://localhost:8080/jakarta_demo/api/products/category/fruit
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-08T094820-2.200.json
+
+###
+
+GET http://localhost:8080/jakarta_demo/api/products/1
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-08T094820-1.200.json
+
+###
+
+GET http://localhost:8080/jakarta_demo/api/products
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-08T094820.200.json
+
+###
+
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+Content-Length: 70
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 5,
+  "name": "Melon",
+  "category": "FRUIT",
+  "rating": 5
+}
+
+<> 2024-10-08T094820.201.txt
+
+###
+
+GET http://localhost:8080/jakarta_demo/api/products/category/fruit
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-08T094623-2.200.json
+
+###
+
+GET http://localhost:8080/jakarta_demo/api/products/1
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-08T094623-1.200.json
+
+###
+
+GET http://localhost:8080/jakarta_demo/api/products
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-08T094623.200.json
+
+###
+
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+Content-Length: 72
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 5,
+  "name": "Error",
+  "category": "EMPTY",
+  "rating": 100
+}
+
+<> 2024-10-08T094623.400.txt
+
+###
+
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+Content-Length: 70
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 5,
+  "name": "Melon",
+  "category": "FRUIT",
+  "rating": 5
+}
+
+<> 2024-10-08T094623.201.txt
+
+###
+
+GET http://localhost:8080/jakarta_demo/api/products
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-08T094455.200.json
+
+###
+
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+Content-Length: 72
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 5,
+  "name": "Error",
+  "category": "EMPTY",
+  "rating": 100
+}
+
+<> 2024-10-08T094455.400.txt
+
+###
+
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+Content-Length: 70
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 5,
+  "name": "Melon",
+  "category": "FRUIT",
+  "rating": 5
+}
+
+<> 2024-10-08T094455.201.txt
+
+###
+
+GET http://localhost:8080/jakarta_demo/api/products
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-08T094432.200.json
+
+###
+
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+Content-Length: 72
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 5,
+  "name": "Error",
+  "category": "EMPTY",
+  "rating": 100
+}
+
+<> 2024-10-08T094432.400.txt
+
+###
+
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+Content-Length: 70
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 5,
+  "name": "Melon",
+  "category": "FRUIT",
+  "rating": 5
+}
+
+<> 2024-10-08T094432.201.txt
+
+###
+
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+Content-Length: 72
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 5,
+  "name": "Error",
+  "category": "EMPTY",
+  "rating": 100
+}
+
+<> 2024-10-08T093537.400.txt
+
+###
+
+POST http://localhost:8080/jakarta_demo/api/products/create
+Content-Type: application/json
+Content-Length: 70
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 5,
+  "name": "Melon",
+  "category": "FRUIT",
+  "rating": 5
+}
+
+<> 2024-10-08T093537.201.txt
+
+###
+
 POST http://localhost:8080/jakarta_demo/api/products/create
 Content-Type: application/json
 Content-Length: 72

@@ -9,14 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="852b65e5-8545-48f6-b7ff-9c10498e67d2" name="Changes" comment="Finished implementing bean validation constraints for my Product record and Product data to object class. I wrote a HTTP req that breaks the constraint and recieved an ConstraintValidationException as expected.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/Log.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/LoggingInterceptor.java" afterDir="false" />
+    <list default="true" id="852b65e5-8545-48f6-b7ff-9c10498e67d2" name="Changes" comment="Implemented logging with interceptor">
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/WarehouseResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/WarehouseResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/service/WarehouseImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/service/WarehouseImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseHTTP.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseHTTP.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/service/WarehouseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/service/WarehouseImpl.java" afterDir="false" />
     </list>
@@ -38,6 +34,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -57,6 +57,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "HTTP Request.All in WarehouseHTTP.executor": "Run",
+    "HTTP Request.WarehouseHTTP | #2.executor": "Run",
     "JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -76,6 +77,9 @@
 }]]></component>
   <component name="RunManager" selected="JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final">
     <configuration name="All in WarehouseHTTP" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseHTTP.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="WarehouseHTTP | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseHTTP.http" index="2" requestIdentifier="#2" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="JBoss/WildFly 33.0.2.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 33.0.2.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -151,6 +155,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.WarehouseHTTP | #2" />
         <item itemvalue="HTTP Request.All in WarehouseHTTP" />
       </list>
     </recent_temporary>
@@ -179,7 +184,8 @@
       <workItem from="1727725399996" duration="798000" />
       <workItem from="1727785141937" duration="1750000" />
       <workItem from="1727866697583" duration="1367000" />
-      <workItem from="1727943366063" duration="3850000" />
+      <workItem from="1727943366063" duration="4176000" />
+      <workItem from="1728372821818" duration="1641000" />
     </task>
     <task id="LOCAL−00001" summary="/products/{id} - getProductById() working as intended">
       <option name="closed" value="true" />
@@ -251,7 +257,14 @@
       <option name="presentableId" value="LOCAL−00010" />
       <updated>1727786847098</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL−00011" summary="Implemented logging with interceptor">
+      <option name="closed" value="true" />
+      <created>1727958504586</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1727958504586</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +278,7 @@
     <MESSAGE value="Implemented synchronizedList instead of CopyOnWrite since in my mind this would be a warehouse app which would have both a lot of writing and reading." />
     <MESSAGE value="Refactored WarehouseResource to use constructor-based injection instead of field-based injection as Martin recommended to simplify testing and code robustness." />
     <MESSAGE value="Finished implementing bean validation constraints for my Product record and Product data to object class. I wrote a HTTP req that breaks the constraint and recieved an ConstraintValidationException as expected." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished implementing bean validation constraints for my Product record and Product data to object class. I wrote a HTTP req that breaks the constraint and recieved an ConstraintValidationException as expected." />
+    <MESSAGE value="Implemented logging with interceptor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented logging with interceptor" />
   </component>
 </project>
