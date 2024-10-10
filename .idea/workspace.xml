@@ -10,11 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="852b65e5-8545-48f6-b7ff-9c10498e67d2" name="Changes" comment="Implemented logging with interceptor">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/streams/server/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/streams/server/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/streams/server/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/streams/server/Servlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseHTTP.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseHTTP.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/service/WarehouseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/service/WarehouseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +29,7 @@
         <option value="Enum" />
         <option value="HTTP Request" />
         <option value="Interface" />
+        <option value="Dockerfile" />
         <option value="Class" />
       </list>
     </option>
@@ -34,10 +37,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -73,6 +76,11 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected="JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final">
@@ -186,6 +194,7 @@
       <workItem from="1727866697583" duration="1367000" />
       <workItem from="1727943366063" duration="4176000" />
       <workItem from="1728372821818" duration="1641000" />
+      <workItem from="1728549925898" duration="5480000" />
     </task>
     <task id="LOCAL−00001" summary="/products/{id} - getProductById() working as intended">
       <option name="closed" value="true" />
