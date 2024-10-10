@@ -2,21 +2,29 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="jakarta-demo" />
+      <artifact name="jakarta-demo:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="852b65e5-8545-48f6-b7ff-9c10498e67d2" name="Changes" comment="Implemented logging with interceptor">
+    <list default="true" id="852b65e5-8545-48f6-b7ff-9c10498e67d2" name="Changes" comment="added server and servlet template from lernia2024">
       <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/streams/server/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/streams/server/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/streams/server/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/streams/server/Servlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/META-INF/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/entities/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/entities/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/entities/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/entities/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/exceptions/IllegalArgumentExceptionMapper$ErrorMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/exceptions/IllegalArgumentExceptionMapper$ErrorMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/exceptions/IllegalArgumentExceptionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/exceptions/IllegalArgumentExceptionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/Log.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/Log.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/LoggingInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/LoggingInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/ProductDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/ProductDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/WarehouseApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/WarehouseApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/WarehouseResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/resources/WarehouseResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/service/WarehouseImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/service/WarehouseImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/service/WarehouseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/jakarta_demo/WEB-INF/classes/com/streams/service/WarehouseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/streams/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streams/server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,33 +65,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "HTTP Request.All in WarehouseHTTP.executor": "Run",
-    "HTTP Request.WarehouseHTTP | #2.executor": "Run",
-    "JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Server.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.All in WarehouseHTTP.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.WarehouseHTTP | #2.executor&quot;: &quot;Run&quot;,
+    &quot;JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected="JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final">
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sebastian Molin\Documents\GitHub\jakarta-demo" />
+      <recent name="C:\Users\Sebastian Molin\Documents\GitHub\jakarta-demo\out\artifacts\jakarta_demo" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Server">
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.streams.server.Server" />
+      <module name="jakarta-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.streams.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in WarehouseHTTP" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/com/streams/resources/WarehouseHTTP.http">
       <method v="2" />
     </configuration>
@@ -163,6 +191,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Server" />
         <item itemvalue="HTTP Request.WarehouseHTTP | #2" />
         <item itemvalue="HTTP Request.All in WarehouseHTTP" />
       </list>
@@ -194,7 +223,9 @@
       <workItem from="1727866697583" duration="1367000" />
       <workItem from="1727943366063" duration="4176000" />
       <workItem from="1728372821818" duration="1641000" />
-      <workItem from="1728549925898" duration="5480000" />
+      <workItem from="1728549925898" duration="9506000" />
+      <workItem from="1728571379496" duration="1100000" />
+      <workItem from="1728588262187" duration="3240000" />
     </task>
     <task id="LOCAL−00001" summary="/products/{id} - getProductById() working as intended">
       <option name="closed" value="true" />
@@ -273,7 +304,14 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1727958504586</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="added server and servlet template from lernia2024">
+      <option name="closed" value="true" />
+      <created>1728564765768</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1728564765768</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +326,7 @@
     <MESSAGE value="Refactored WarehouseResource to use constructor-based injection instead of field-based injection as Martin recommended to simplify testing and code robustness." />
     <MESSAGE value="Finished implementing bean validation constraints for my Product record and Product data to object class. I wrote a HTTP req that breaks the constraint and recieved an ConstraintValidationException as expected." />
     <MESSAGE value="Implemented logging with interceptor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented logging with interceptor" />
+    <MESSAGE value="added server and servlet template from lernia2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="added server and servlet template from lernia2024" />
   </component>
 </project>
