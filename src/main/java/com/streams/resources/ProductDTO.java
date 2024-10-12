@@ -10,6 +10,7 @@ import jakarta.validation.constraints.Size;
 import java.time.LocalDate;
 
 public class ProductDTO {
+    @NotNull
     @Min(1)
     private int id;
 
@@ -20,6 +21,7 @@ public class ProductDTO {
     @NotNull
     private String category;
 
+    @NotNull
     @Min(0)
     @Max(10)
     private int rating;
